@@ -32,7 +32,7 @@ public class Calculator {
                     System.out.print("Sayi giriniz: ");
                     int c = kullanici.nextInt();
                     int bolme = ax(d, c);
-                    System.out.println("bolmeSonuc = " + bolme);
+                    System.out.println("\nbolmeSonuc = " + bolme);
                     break;
 
                 default:
