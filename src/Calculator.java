@@ -1,13 +1,13 @@
 import java.util.Scanner;
 
 public class Calculator {
-    public static void main(String[] args) {
+    public static void main(String[] argc) {
         Scanner kullanici = new Scanner(System.in);
         while (true) {
             System.out.print("Toplam/cikarma \"1\" \nCarpma \"2\" \nbolme \"3\"\n\nLutfen Secim Yapiniz: ");
-            char operation = kullanici.next().charAt(0);
+            char o = kullanici.next().charAt(0);
 
-            switch (operation) {
+            switch (o) {
                 case '2':
                     System.out.print("Sayi giriniz: ");
                     int x = kullanici.nextInt();
@@ -23,7 +23,7 @@ public class Calculator {
                     System.out.print("Sayi giriniz: ");
                     int b = kullanici.nextInt();
                     int toplamcikarma = tx(a, b);
-                    System.out.println("ToplamSonuc = " + toplamcikarma);
+                    System.out.println("\nToplamSonuc = " + toplamcikarma);
                     break;
 
                 case '3':
