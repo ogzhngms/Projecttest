@@ -1,24 +1,24 @@
 import java.util.Scanner;
 
-interface MathOperation {
+interface Math {
     int calculate(int x, int y);
 }
 
-class Add implements MathOperation {
+class Add implements Math {
     @Override
     public int calculate(int x, int y) {
         return x + y;
     }
 }
 
-class Multip implements MathOperation {
+class Multip implements Math {
     @Override
     public int calculate(int x, int y) {
         return x * y;
     }
 }
 
-class Div implements MathOperation {
+class Div implements Math {
     @Override
     public int calculate(int x, int y) {
         if (x == 0) {
@@ -41,17 +41,17 @@ public class Calculator {
             System.out.print("Toplam/cikarma \"1\" \nCarpma \"2\" \nbolme \"3\"\n\nLutfen Secim Yapiniz: ");
             char mathchoise = kullanici.next().charAt(0);
 
-            MathOperation mathOperation;
+            Math object;
 
             switch (mathchoise) {
                 case '1':
-                    mathOperation = new Add();
+                    object = new Add();
                     break;
                 case '2':
-                    mathOperation = new Multip();
+                    object = new Multip();
                     break;
                 case '3':
-                    mathOperation = new Div();
+                    object = new Div();
                     break;
                 default:
                     System.out.println("Gecersiz Islem. Lutfen tekrar deneyiniz");
@@ -63,7 +63,7 @@ public class Calculator {
             System.out.print("Sayi giriniz: ");
             int y = kullanici.nextInt();
 
-            int result = mathOperation.calculate(x, y);
+            int result = object.calculate(x, y);
 
             System.out.println("\nSonuc = " + result);
 
