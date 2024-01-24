@@ -4,16 +4,12 @@ interface Math { int calculate(int x, int y);}
 
 class Add implements Math {
     @Override
-    public int calculate(int x, int y) {
-        return x + y;
-    }
+    public int calculate(int x, int y) {return x + y;}
 }
 
 class Extraction implements Math {
     @Override
-    public int calculate(int x, int y) {
-        return x - y;
-    }
+    public int calculate(int x, int y) {return x - y;}
 }
 
 class Multiply implements Math {
